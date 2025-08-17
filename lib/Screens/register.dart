@@ -1,9 +1,11 @@
 
+import 'package:course_flutter/Screens/login.dart';
 import 'package:course_flutter/widgets/custom_text_button_widget.dart';
 import 'package:course_flutter/widgets/logo_widget.dart';
 import 'package:course_flutter/widgets/text_input_widget.dart';
 import 'package:course_flutter/widgets/login_button_widget.dart';
 import 'package:flutter/material.dart';
+
 class Register extends StatelessWidget {
   const Register({super.key});
 
@@ -23,7 +25,11 @@ class Register extends StatelessWidget {
           TextInputWidget(TextFieldText: 'Password', isObsecure: true,sizedBoxHeight: 25,prefixIcon: Icons.password),
           TextInputWidget(TextFieldText: 'Re enter Password', isObsecure: true,sizedBoxHeight: 25,prefixIcon: Icons.password),
           LoginButtonWidget(btnText: 'Sign Up',),
-          CustomTextButtonWidget(btnText: 'Already have an account? Log in',),
+          CustomTextButtonWidget(btnText: 'Already have an account? Log in',
+          onClick: (){
+            Navigator.push(context,
+            MaterialPageRoute(builder:(context)=> Login() ) );
+          }),
           ],
       ),)
       )
