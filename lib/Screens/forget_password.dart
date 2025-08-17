@@ -3,6 +3,8 @@ import 'package:course_flutter/widgets/logo_widget.dart';
 import 'package:course_flutter/widgets/text_input_widget.dart';
 import 'package:course_flutter/widgets/login_button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:course_flutter/Screens/login.dart'; // Import the Register widget
+
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
 
@@ -25,7 +27,11 @@ class ForgetPassword extends StatelessWidget {
           SizedBox(height: 20),
           TextInputWidget(TextFieldText: 'Email or phone number',keyboardType: TextInputType.emailAddress,prefixIcon: Icons.email,),
           LoginButtonWidget(btnText: 'Send Reset Link'),
-          CustomTextButtonWidget(btnText: 'Back to Login',),   
+          CustomTextButtonWidget(btnText: 'Back to Login',
+          onClick: (){
+            Navigator.push(context,
+            MaterialPageRoute(builder:(context)=> Login() ) );
+          }),
         ],
       ),)
       )
