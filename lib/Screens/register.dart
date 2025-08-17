@@ -27,8 +27,7 @@ class Register extends StatelessWidget {
           LoginButtonWidget(btnText: 'Sign Up',),
           CustomTextButtonWidget(btnText: 'Already have an account? Log in',
           onClick: (){
-            Navigator.push(context,
-            MaterialPageRoute(builder:(context)=> Login() ) );
+            Navigator.pop(context);
           }),
           ],
       ),)
